@@ -10,4 +10,4 @@ services:
     restart: unless-stopped
 
 volumes:
-  registry:
+  registry: 
