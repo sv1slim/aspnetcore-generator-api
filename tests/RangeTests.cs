@@ -17,7 +17,7 @@ namespace tests
             Assert.Equal(3, generated.Count());
         }
         
-        
+        // comment
         [Fact]
         public void SortShouldOrderResults()
         {
