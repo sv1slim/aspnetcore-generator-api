@@ -39,7 +39,7 @@ namespace integration
             Console.WriteLine($"Checking emails: {checkEmails.RequestUri}");
             using (var response = await client.SendAsync(checkEmails))
             {
-                response.EnsureSuccessS tatusCode();
+                response.EnsureSuccessStatusCode();
                 var content = await response.Content.ReadAsStringAsync();
                 var messages = JObject.Parse(content);
                 messages.Should().HaveElement("total").Which.Should().Be(1);
