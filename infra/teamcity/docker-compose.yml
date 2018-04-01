@@ -10,8 +10,9 @@ services:
             - 8111:8111
         restart: unless-stopped
             
-    teamcity-agent:
-        image: jetbrains/teamcity-agent
+    teamcity-agent: 
+        image: aspnetcore/temcity-agent-with-compose:latest
+        build: ./agent
         environment:
             SERVER_URL: http://teamcity:8111
         volumes:
